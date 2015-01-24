@@ -40,24 +40,24 @@ Tidydata.txt consists of data arranged into the following 5 columns:
   + Units: unitless  
 
 2. subject_type  
-+ Subjects were grouped into test or training groups so that prediction models could be trained and then tested on separate individuals' data. This column holds the value of "test" or "train"
-+ source: column was added to data (see README.md), with subjects from the subject_test.txt file getting the value "test" and subjects from the /train/subject_train.txt getting the value "train" prior to merging these two subsets of subjects
-+ Units: unitless
+  + Subjects were grouped into test or training groups so that prediction models could be trained and then tested on separate individuals' data. This column holds the value of "test" or "train"
+  + source: column was added to data (see README.md), with subjects from the subject_test.txt file getting the value "test" and subjects from the /train/subject_train.txt getting the value "train" prior to merging these two subsets of subjects
+  + Units: unitless
 
 3. activity_type
-+ Text description of one of the six different physical behaviors engaged in by subject; (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
-+ Source: Initial source of data were the /test/y_test.txt and /train/y_train.txt files. These files contained number values from 1 to 6 that correlated to behaviors according to the /activity_labels.txt file. This column was constructed by converting the numeric values to the corresponding text descriptions
-+ Units: unitless
+  + Text description of one of the six different physical behaviors engaged in by subject; (WALKING, WALKING_UPSTAIRS, WALKING_DOWNSTAIRS, SITTING, STANDING, LAYING)
+  + Source: Initial source of data were the /test/y_test.txt and /train/y_train.txt files. These files contained number values from 1 to 6 that correlated to behaviors according to the /activity_labels.txt file. This column was constructed by converting the numeric values to the corresponding text descriptions
+  + Units: unitless
 
 4. test_type
-+ Text delineating what features of movement were captured by the measurement.
-+ Source: The names of the features (now named test_types) came from the /features.txt file. There were originally 561 features recorded per subject throughout each activity performed. This vector of 561 terms was matched to the 561 fixed-width columns in /test/subject_test.txt and /train/subject_train.txt files.  The test_types included in the final tidydata.txt file were (by project specification) a subset of the original 561 values: only those that themselves were measurements of means or standard deviation values in the original dataset were included. Please refer to "Further description of test types" below for a clearer understanding of this column's data.
-+ Units: unitless
+  + Text delineating what features of movement were captured by the measurement.
+  + Source: The names of the features (now named test_types) came from the /features.txt file. There were originally 561 features recorded per subject throughout each activity performed. This vector of 561 terms was matched to the 561 fixed-width columns in /test/subject_test.txt and /train/subject_train.txt files.  The test_types included in the final tidydata.txt file were (by project specification) a subset of the original 561 values: only those that themselves were measurements of means or standard deviation values in the original dataset were included. Please refer to "Further description of test types" below for a clearer understanding of this column's data.
+  + Units: unitless
 
 5. meanOfMeasurements
-+ Mean of multiple measurements of specific test_type taken of given subject during given activity. 
-+ Source: Calculated by ddply function, obtaining the mean of groups of measurements for which the other columns were equal (subject_id, activity_type, test_type)
-+ Units: unitless. The values are normalized and bounded within [-1,1].
+  + Mean of multiple measurements of specific test_type taken of given subject during given activity. 
+  + Source: Calculated by ddply function, obtaining the mean of groups of measurements for which the other columns were equal (subject_id, activity_type, test_type)
+  + Units: unitless. The values are normalized and bounded within [-1,1].
 
   
 #### Further description of test_types
