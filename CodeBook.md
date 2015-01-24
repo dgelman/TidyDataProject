@@ -51,7 +51,7 @@ Tidydata.txt consists of data arranged into the following 5 columns:
 
 4. test_type
   + Text delineating what features of movement were captured by the measurement.
-  + Source: The names of the features (now named test_types) came from the /features.txt file. There were originally 561 features recorded per subject throughout each activity performed. This vector of 561 terms was matched to the 561 fixed-width columns in /test/subject_test.txt and /train/subject_train.txt files.  The test_types included in the final tidydata.txt file were (by project specification) a subset of the original 561 values: only those that themselves were measurements of means or standard deviation values in the original dataset were included. Please refer to "Further description of test types" below for a clearer understanding of this column's data.
+  + Source: The names of the features (now named test_types) came from the /features.txt file. There were originally 561 features recorded per subject throughout each activity performed. This vector of 561 terms was matched to the 561 fixed-width columns in /test/subject_test.txt and /train/subject_train.txt files.  The test_types included in the final tidydata.txt file were (by project specification) a subset of the original 561 values: only those that themselves were measurements of means or standard deviation values in the original dataset were included. **Please refer to "Further description of test types" below for a clearer understanding of this column's data.**
   + Units: unitless
 
 5. meanOfMeasurements
