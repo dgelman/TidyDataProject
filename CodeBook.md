@@ -34,12 +34,12 @@ The tidydata.txt is structured as a comma-separated value text document. Each ro
 
 Tidydata.txt consists of data arranged into the following 5 columns:
 
-1. subject_ID
-+ID of each participant, numbered 1 to 30
-+Source: /test/subject_test.txt and /train/subject_train.txt files
-+Units: unitless
+1. subject_ID  
++ ID of each participant, numbered 1 to 30  
++ Source: /test/subject_test.txt and /train/subject_train.txt files  
++ Units: unitless  
 
-2. subject_type
+2. subject_type  
 + Subjects were grouped into test or training groups so that prediction models could be trained and then tested on separate individuals' data. This column holds the value of "test" or "train"
 + source: column was added to data (see README.md), with subjects from the subject_test.txt file getting the value "test" and subjects from the /train/subject_train.txt getting the value "train" prior to merging these two subsets of subjects
 + Units: unitless
